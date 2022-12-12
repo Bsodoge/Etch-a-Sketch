@@ -1,0 +1,19 @@
+
+.container{
+    width: 480px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    flex: 1;
+}
+.column{
+    background-color: white;
+    border: solid rgb(209, 209, 209);
+    flex: 1;
+    min-height: 5px;
+    min-width: 5px;
+}
