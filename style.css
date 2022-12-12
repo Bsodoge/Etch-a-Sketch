@@ -1,10 +1,13 @@
 
+body{
+    background-color: black;
+}
 .container{
     width: 480px;
     height: 500px;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 .row{
     display: flex;
@@ -12,8 +15,13 @@
 }
 .column{
     background-color: white;
-    border: solid rgb(209, 209, 209);
+    border: solid 0.25px rgb(209, 209, 209);
     flex: 1;
     min-height: 5px;
     min-width: 5px;
+}
+button{
+    background-color: aqua;
+    padding: 10px;
+    margin: 2rem 0px;
 }
