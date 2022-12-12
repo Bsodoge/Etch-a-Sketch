@@ -15,7 +15,7 @@ function drawGrid(Length){
         for(let x = 0; x < Length; x++){
             const column = document.createElement('div');
             column.classList.add('column');
-            column.addEventListener("mouseover",() => {column.style.backgroundColor = `rgb(, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`});
+            column.addEventListener("mouseover",() => {column.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`});
             row.appendChild(column);
         }
     }   
