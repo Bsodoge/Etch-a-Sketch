@@ -2,9 +2,12 @@ const container = document.querySelector("#container");
 const button = document.querySelector('#newGrid');
 const gridLines = document.querySelector('#gridLines');
 const black = document.querySelector('#black');
+const rainbow = document.querySelector('#rand');
 let toggled = false;
+let blackToggle = false;
 button.addEventListener('click',newGrid);
-black.addEventListener('click',() =>  console.log("black") );
+black.addEventListener('click',() => {if(blackToggle === false) blackToggle = true;} );
+rainbow.addEventListener('click',() => {if(blackToggle === true) blackToggle = false;} );
 gridLines.addEventListener('click',gridLineToggle);
 
 function drawGrid(Length){
@@ -15,7 +18,7 @@ function drawGrid(Length){
         for(let x = 0; x < Length; x++){
             const column = document.createElement('div');
             column.classList.add('column');
-            column.addEventListener("mouseover",() => {column.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`});
+            column.addEventListener("mouseover",() => {if(blackToggle === false) column.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`; else column.style.backgroundColor = `rgb(0,0,0)`});
             row.appendChild(column);
         }
     }   
