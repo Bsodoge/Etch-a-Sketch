@@ -25,7 +25,7 @@ function drawGrid(Length){
 }
 function newGrid(){
     let choice = prompt("Enter number of squares per side (max 100)");
-    if(choice > 100 || choice < 0 || choice % 1 !== 0)return;
+    if(choice > 100 || choice <= 0 || choice % 1 !== 0)return;
     while (container.firstChild) { //removes all child nodes
         container.removeChild(container.lastChild);
     }
