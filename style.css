@@ -8,6 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    border: 5px solid #deb12c;
 }
 .row{
     display: flex;
@@ -25,10 +26,12 @@ button{
     color: #bac5cf;
     padding: 10px;
     margin: 2rem 0px;
+    border: 1px solid #96a3ad;
 }
 
 nav{
     display: flex;
     align-items: center;
     justify-content: center; 
+    gap: 10px;
 }
