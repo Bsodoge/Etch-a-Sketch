@@ -1,6 +1,6 @@
 
 body{
-    background-color: black;
+    background-color: #2d2d2d;
 }
 .container{
     width: 480px;
@@ -21,7 +21,14 @@ body{
     min-width: 5px;
 }
 button{
-    background-color: aqua;
+    background-color: #3a434b;
+    color: #bac5cf;
     padding: 10px;
     margin: 2rem 0px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
