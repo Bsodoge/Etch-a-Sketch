@@ -6,9 +6,21 @@ const rainbow = document.querySelector('#rand');
 let toggled = false;
 let blackToggle = false;
 button.addEventListener('click',newGrid);
-black.addEventListener('click',() => {if(blackToggle === false) blackToggle = true;} );
-rainbow.addEventListener('click',() => {if(blackToggle === true) blackToggle = false;} );
+black.addEventListener('click',toggleBlack);
+rainbow.addEventListener('click',toggleBlack);
 gridLines.addEventListener('click',gridLineToggle);
+
+function toggleBlack(){
+    if(blackToggle) {
+        blackToggle = false;
+        rainbow.classList.add('selected')
+        black.classList.remove('selected')
+    } else{
+        blackToggle = true;
+        rainbow.classList.remove('selected')
+        black.classList.add('selected')
+    }
+}
 
 function drawGrid(Length){
     for(let y = 0; y < Length; y++){
@@ -25,7 +37,7 @@ function drawGrid(Length){
 }
 function newGrid(){
     let choice = prompt("Enter number of squares per side (max 100)");
-    if(choice > 100 || choice <= 0 || choice % 1 !== 0)return;
+    if(choice > 100 || choice < 0 || choice % 1 !== 0)return;
     while (container.firstChild) { //removes all child nodes
         container.removeChild(container.lastChild);
     }
